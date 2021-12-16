@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "object",
+      "properties": {
+        "jobs": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "company": {
+                  "type": "object",
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "websiteUrl": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "name",
+                    "websiteUrl"
+                  ]
+                }
+              },
+              "required": [
+                "title",
+                "company"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "jobs"
+      ]
+    }
+  },
+  "required": [
+    "data"
+  ]
+}
